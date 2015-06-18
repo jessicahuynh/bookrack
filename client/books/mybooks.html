@@ -2,14 +2,14 @@
 <h1>My Books</h1>
 {{#if currentUser}}
 <div>
-	<a class="btn btn-warning" href="#addbook" data-toggle="collapse">Add a book</a>
+	<a class="btn btn-success" href="#addbook" data-toggle="collapse">Add a book</a>
 
 	<div id="addbook" class="collapse">
 		<form class="form-horizontal" id="addbookform">
 			{{> bookForm}}
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-danger">Add</button>
+					<button type="submit" class="btn btn-success">Add</button>
 				</div>
 			</div>
 			<hr />
