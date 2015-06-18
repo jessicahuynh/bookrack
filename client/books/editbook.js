@@ -1,9 +1,10 @@
 Template.editbook.helpers({
 	currentBook:function() {
 		
-		console.log(window.location.pathname.split("/"));
-		bookId = window.location.pathname.split("/")[2];
-		return Books.findOne({_id:bookId});
+		//console.log(window.location.pathname.split("/"));
+		//bookId = window.location.pathname.split("/")[2];
+		console.log(Session.get("editedbook"));
+		return Books.findOne({_id:Session.get("editedbook")});
 	}
 });
 

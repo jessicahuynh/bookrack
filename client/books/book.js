@@ -1,7 +1,7 @@
 Template.book.events({
 	'click .edit-btn': function() {
 		event.preventDefault();
-
-		Router.go('/editBook/'+this._id);
+		Session.set("editedbook",this._id);
+		Router.go('editbook',{_id:this._id});
 	}
 });
