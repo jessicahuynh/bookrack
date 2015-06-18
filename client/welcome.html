@@ -45,7 +45,8 @@
 				<li><em>{{title}}</em> by {{author}}</li>
 				{{/each}}
 			</ul>
-			<p>Try adding your own! {{#if currentUser}}Just create an account or login first.{{/if}}</p>
+			<p>Try adding your own!</p>
+			{{#if currentUser}}{{else}}<p>Just create an account or login first.</p>{{/if}}
 		</div>
 
 		<div class="col-md-4 bg-warning">

@@ -1,12 +1,18 @@
+// $(document).ready(function() {
+// 	$("#bookStatus").val(Books.findOne({_id:Session.get("editedbook")}).status);
+// });
+
 Template.editbook.helpers({
 	currentBook:function() {
-		
-		//console.log(window.location.pathname.split("/"));
-		//bookId = window.location.pathname.split("/")[2];
-		console.log(Session.get("editedbook"));
 		return Books.findOne({_id:Session.get("editedbook")});
 	}
 });
+
+Template.editbook.rendered = function(){
+	var book = Books.findOne({_id:Session.get("editedbook")});
+	$("#bookStatus").val(book.status).prop("selected",true);
+	console.log(bookStatus.value + book.status);
+};
 
 Template.editbook.events({
 	"submit #editBook": function(event) {
